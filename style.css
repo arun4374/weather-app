@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    font-family:"Roboto", sans-serif, "JetBrains Mono", monospace,Arial, sans-serif, 'Helvetica Neue', sans-serif
+}
+
+.main {
+    background: url('Assets/bg.jpg') center center/cover no-repeat;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width:350px;
+    height: 500px;
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(9px) saturate(180%);
+    background-color: rgba(131, 130, 130, 0.651);
+    border-radius: 12px;
+    padding: 10px 20px;
+    overflow:hidden;
+}
+.content{
+    display:none;
+    flex-direction: column;
+}
+
+
+
+.search-bar {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    width: 250px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: #e0e0e0;
+}
+
+.search-bar input::placeholder {
+    font-size: 14px;
+    color: rgba(112, 111, 111, 0.822);
+    font-weight: bold;
+}
+
+.search-bar span {
+    width: 35px;
+    height: 35px;
+    background-color: #e0e0e0;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    line-height: 35px;
+    transition: all 0.3s ease;
+}
+.search-bar span:hover {
+    background-color: rgba(204, 204, 204, 0.582);
+    transform: scale(1.1);
+}
+
+.locationContainer {
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+.loaction {
+    display: flex;
+    gap: 4px;
+}
+
+ .date {
+    color: rgb(49, 180, 212);
+   font-style: italic;
+    font-weight:bold;
+}
+.location-icon{
+    font-size: 1.5em;
+    color:orange;
+}
+.locationContainer h3 {
+    font-weight: bold;
+    color: #fff;
+    font-style: italic;
+    /* text-transform: uppercase; */
+}
+
+.weathercontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weathercontainer img {
+    animation: ripple 3s infinite linear;
+}
+
+@keyframes ripple {
+    0%{
+        transform: translateY(10px);
+    }50%{
+        transform: translateY(0);
+    }100%{
+        transform: translateY(10px);
+    }
+}
+
+.weathercontainer h1 {
+    color: #fff;
+}
+
+.weathercontainer h3 {
+    color: rgb(255, 165, 0);
+    font-weight: 600;
+}
+
+.forecastdata {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    
+}
+
+.forecastdata .forecast-item {
+    background: rgb(255,255,255, 0.1);
+    padding: 10px;
+    border-radius:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+    cursor:pointer;
+    transition: transform 0.2s ease;
+}
+.forecastdata .forecast-item:hover {
+    transform: scale(1.1);
+    border: 1px solid #bebebe;
+}
+
+.forecastdata .forecast-item img{
+    width: 60px;
+    height: 60px;
+}
+
+.forecastdata .forecast-item h3{
+    font-weight: 600;
+    font-size: 16px;
+    font-style:italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'sans-seri';
+     color:rgb(49, 180, 212);
+}
+
+.forecastdata .forecast-item h4 {
+ color: #fff; 
+ font-weight: lighter;
+}
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5em;
+   
+}
+
+.pageContent i {
+    font-size: 100px;
+    color: rgb(214, 200, 200);
+    animation: zoom 2s infinite normal;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}
+.pageContent h3 {
+    font-size: 34px;
+    font-weight: lighter;
+}
+.notfound h2{
+    font-size: 3rem;;
+}
+.notfound{
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    
+   
+}
