@@ -12,7 +12,7 @@ var not_found=document.querySelector('.notfound');
 var page_content=document.querySelector('.pageContent');
 
 // weather info API
-const apiKey = %apiKey%
+const apiKey = "%apiKey%";
 
 async function fetchingWeatherData(city,info){
     const res = await fetch(`https://api.openweathermap.org/data/2.5/${info}?q=${city}&units=metric&appid=${apiKey}`)
@@ -155,4 +155,5 @@ function isLetterOnly(dup){
     return  /^[a-zA-Z\s]+$/.test(dup);
 
 }
+
 
